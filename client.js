@@ -1,4 +1,4 @@
-const socket = io("http://localhost:800");
+const socket = io("https://gossip-backend-wheat.vercel.app");
 const form = document.getElementById("send-container");
 const messageInput = document.getElementById("mesgin");
 const messageContainer = document.querySelector(".container");
