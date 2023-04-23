@@ -1,4 +1,4 @@
-const socket = io("https://gossip-backend-msrv.vercel.app/");
+const socket = io("https://backendgossip.vercel.app/");
 const form = document.getElementById("send-container");
 const messageInput = document.getElementById("mesgin");
 const messageContainer = document.querySelector(".container");
