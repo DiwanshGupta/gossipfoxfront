@@ -1,4 +1,7 @@
-const socket = io("https://backendgossip-2tt51gev6-diwanshgupta.vercel.app");
+import io from 'socket.io-client';
+ const socket = io("https://backendgossip-2tt51gev6-diwanshgupta.vercel.app",{
+         transports: ['websocket'],
+        });
 const form = document.getElementById("send-container");
 const messageInput = document.getElementById("mesgin");
 const messageContainer = document.querySelector(".container");
