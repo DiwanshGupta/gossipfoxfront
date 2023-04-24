@@ -1,6 +1,13 @@
- const socket = io("https://backendgossip-2tt51gev6-diwanshgupta.vercel.app",{
-         transports: ['websocket'],
-        });
+ const socket = io("https://backendgossip-2tt51gev6-diwanshgupta.vercel.app");
+const app = express();
+app.use(cors());
+const server = http.createServer(app);
+const io = socketio(server, {
+     cors: {
+     origin: "http://localhost:8080"
+                                }
+});
+const PORT = process.env.PORT || 8000;
 const form = document.getElementById("send-container");
 const messageInput = document.getElementById("mesgin");
 const messageContainer = document.querySelector(".container");
